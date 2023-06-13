@@ -1,5 +1,9 @@
+import { IntervalTimer } from "../components/interval/IntervalTimer"
+
 export const IntervalPage = () => {
     return (
-        <h1>Interval Page</h1>
+        <div className="flex justify-center my-4">
+            <IntervalTimer />
+        </div>
     )
 }
