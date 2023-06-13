@@ -7,9 +7,11 @@ export const IntervalTimer = () => {
     const [paused, setPaused] = useState(false);
 
     const handleClick = () => {
+        // Start the timer if it hasn't started yet
         if (!timerStarted) {
             setTimerStarted(true);
         } else {
+            // Toggle the pause state if the timer is already started
             setPaused(!paused);
         }
     };
@@ -18,10 +20,12 @@ export const IntervalTimer = () => {
         let interval = null;
 
         if (timerStarted && !paused) {
+            // Create the interval and update the seconds based on the mode
             interval = setInterval(() => {
                 if (seconds > 1) {
                     setSeconds((prevSeconds) => prevSeconds - 1);
                 } else {
+                    // Switch between rest and work modes
                     if (mode === 'rest') {
                         setSeconds(20);
                         setMode('work');
@@ -33,6 +37,7 @@ export const IntervalTimer = () => {
             }, 1000);
         }
 
+        // Clean up the interval on component unmount or when dependencies change
         return () => {
             clearInterval(interval);
         };
