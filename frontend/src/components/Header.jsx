@@ -2,7 +2,7 @@ import { toggleMenu } from "../utils/NavUtils";
 
 export const Header = () => {
     return (
-        <div className="px-4 flex md:justify-center justify-between items-center">
+        <div className="bg-brown-500 text-brown-200 px-4 flex md:justify-center justify-between items-center">
             <h1 className="text-4xl hover:cursor-pointer hover:text-brown-300">
                 Apex Fitness
             </h1>
