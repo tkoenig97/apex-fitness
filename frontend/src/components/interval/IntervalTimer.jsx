@@ -17,6 +17,14 @@ export const IntervalTimer = () => {
     };
 
     useEffect(() => {
+        const handleSpacebarEvent = (event) => {
+            if (event.code === 'Space') {
+                handleClick();
+            }
+        };
+
+        window.addEventListener('keydown', handleSpacebarEvent);
+
         let interval = null;
 
         if (timerStarted && !paused) {
@@ -39,6 +47,7 @@ export const IntervalTimer = () => {
 
         // Clean up the interval on component unmount or when dependencies change
         return () => {
+            window.removeEventListener('keydown', handleSpacebarEvent);
             clearInterval(interval);
         };
     }, [seconds, mode, timerStarted, paused]);
