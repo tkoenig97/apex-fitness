@@ -52,9 +52,19 @@ export const IntervalTimer = () => {
         };
     }, [seconds, mode, timerStarted, paused]);
 
+    let backgroundColor = '';
+
+    if (!timerStarted || paused) {
+        backgroundColor = 'bg-yellow-400';
+    } else if (mode === 'rest') {
+        backgroundColor = 'bg-red-400';
+    } else {
+        backgroundColor = 'bg-green-400';
+    }
+
     return (
         <div
-            className="rounded-full text-2xl border-2 border-black bg-green-400 w-40 h-40 items-center flex justify-center cursor-pointer"
+            className={`rounded-full text-2xl border-2 border-black ${backgroundColor} w-40 h-40 items-center flex justify-center cursor-pointer`}
             onClick={handleClick}
         >
             {seconds}
