@@ -1,4 +1,5 @@
 from django.http import HttpResponse, JsonResponse
+from django.contrib.auth import authenticate, login, logout
 from rest_framework.decorators import api_view
 from .models import App_User
 
@@ -28,3 +29,20 @@ def user_sign_up(request):
     except Exception as e:
         print(e)
         return JsonResponse({'success':False})
+    
+@api_view(['POST'])
+def user_log_in(request):
+    email = request.data['email']
+    password = request.data['password']
+    user = authenticate(username = email, password = password)
+    if user is not None and user.is_active:
+        try: 
+            # Creates Session ID
+            login(request._request, user)
+            print(user)
+            return JsonResponse({'user': {
+                'email': user.email, 'first_name': user.first_name, 'last_name': user.last_name}, "login":True})
+        except Exception as e:
+            print(e)
+            return JsonResponse({'login':False})
+    return JsonResponse({'login':False})
