@@ -2,7 +2,7 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.decorators import api_view
 from django.core.serializers import serialize
-from .models import App_User
+from .models import App_user
 
 # Create your views here.
 def react_index(request, route=None):
@@ -24,7 +24,7 @@ def user_sign_up(request):
         staff = request.data['staff']
     try:
         # Creates new user
-        new_user = App_User.objects.create_user(username = email, email = email, first_name = first_name, last_name = last_name, password = password, is_superuser = super_user, is_staff = staff)
+        new_user = App_user.objects.create_user(username = email, email = email, first_name = first_name, last_name = last_name, password = password, is_superuser = super_user, is_staff = staff)
         new_user.save()
         return JsonResponse({'success':True})
     except Exception as e:
