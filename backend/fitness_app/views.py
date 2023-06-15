@@ -1,6 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.decorators import api_view
+from django.core.serializers import serialize
 from .models import App_User
 
 # Create your views here.
@@ -56,3 +57,13 @@ def user_log_out(request):
     except Exception as e:
         print(e)
         return JsonResponse({'logout':False})
+    
+@api_view(['GET'])
+def curr_user(request):
+    if request.user.is_authenticated:
+        #                    format       query                     options
+        user_info = serialize("json",  [request.user], fields = ['name', 'email'])
+        user_info_workable = json.loads(user_info)
+        return JsonResponse(user_info_workable[0]['fields'])
+    else:
+        return JsonResponse({"user":None})
