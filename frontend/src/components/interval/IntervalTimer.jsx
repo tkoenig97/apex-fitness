@@ -7,7 +7,7 @@ export const IntervalTimer = () => {
     const [timerStarted, setTimerStarted] = useState(false);
     const [paused, setPaused] = useState(false);
 
-    const handleClick = () => {
+    const handleTimerActivation = () => {
         // Start the timer if it hasn't started yet
         if (!timerStarted) {
             setTimerStarted(true);
@@ -20,7 +20,7 @@ export const IntervalTimer = () => {
     useEffect(() => {
         const handleSpacebarEvent = (event) => {
             if (event.code === 'Space') {
-                handleClick();
+                handleTimerActivation();
             }
         };
 
@@ -60,7 +60,7 @@ export const IntervalTimer = () => {
                 paused,
                 mode
             )} w-40 h-40 items-center flex justify-center cursor-pointer`}
-            onClick={handleClick}
+            onClick={handleTimerActivation}
         >
             {seconds}
         </div>
