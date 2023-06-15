@@ -46,3 +46,13 @@ def user_log_in(request):
             print(e)
             return JsonResponse({'login':False})
     return JsonResponse({'login':False})
+
+@api_view(['POST'])
+def user_log_out(request):
+    try:
+        # Removes session ID
+        logout(request)
+        return JsonResponse({'logout':True})
+    except Exception as e:
+        print(e)
+        return JsonResponse({'logout':False})
