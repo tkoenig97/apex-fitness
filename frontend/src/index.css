@@ -49,3 +49,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.login-button {
+  @apply border-4 border-brown-200 rounded-full p-2 hover:bg-brown-200 hover:border-gray-500 hover:text-brown-400 transition ease-out duration-300
+}

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { LoginButtons } from './user/LoginButtons';
 
 export const Navbar = () => {
     return (
@@ -21,6 +22,9 @@ export const Navbar = () => {
                 </li>
                 <li className="mt-6">
                     <Link to={'/log'}>Daily Log</Link>
+                </li>
+                <li className="mt-6">
+                    <LoginButtons />
                 </li>
             </ul>
         </div>
