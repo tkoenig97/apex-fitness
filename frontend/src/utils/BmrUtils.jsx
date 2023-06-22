@@ -13,13 +13,13 @@ export const CalculateBmr = (age, gender, height, weight) => {
 }
 
 export const convertFtToIn = (feet, inches) => {
-    let output = inches
-    output += (feet * 12)
-    return output
+    let height = inches
+    height += (feet * 12)
+    return height
 }
 
 export const convertMToCm = (meters, centimeters) => {
-    let output = centimeters;
-    output += meters * 100;
-    return output;
+    let height = centimeters;
+    height += meters * 100;
+    return height;
 };
