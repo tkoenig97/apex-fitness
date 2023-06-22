@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Header } from './components/Header';
 import { createContext, useState, useEffect } from 'react';
-import { currUser, getToken } from './utils/userUtils';
+import { currUser, getToken } from './utils/UserUtils';
 import './App.css';
 
 export const UserContext = createContext(null);
