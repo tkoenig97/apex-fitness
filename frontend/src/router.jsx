@@ -1,9 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { IndexPage } from './pages/IndexPage';
-import App from './App'
 import { IntervalPage } from './pages/IntervalPage';
 import { LoginPage } from './pages/LoginPage';
 import { SignupPage } from './pages/SignupPage';
+import { BmrPage } from './pages/BmrPage';
+import App from './App'
 
 const Router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const Router = createBrowserRouter([
             {
                 path: '/interval',
                 element: <IntervalPage />,
+            },
+            {
+                path: '/bmr',
+                element: <BmrPage />,
             },
             {
                 path: '/login',
