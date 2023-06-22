@@ -11,3 +11,9 @@ const CalculateBmr = (age, gender, height, weight) => {
 
     return bmr
 }
+
+const convertFtToIn = (feet, inches) => {
+    let output = inches
+    output += (feet * 12)
+    return output
+}
