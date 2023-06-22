@@ -17,3 +17,9 @@ const convertFtToIn = (feet, inches) => {
     output += (feet * 12)
     return output
 }
+
+const convertMToCm = (meters, centimeters) => {
+    let output = centimeters;
+    output += meters * 100;
+    return output;
+};
