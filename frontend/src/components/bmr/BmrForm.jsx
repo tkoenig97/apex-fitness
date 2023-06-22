@@ -46,6 +46,7 @@ export const BmrForm = () => {
                         max="9"
                     ></input>
                 </div>
+                <input type="submit" value='Submit'></input>
             </form>
         </div>
     );
