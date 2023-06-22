@@ -31,7 +31,7 @@ export const BmrForm = () => {
                     ></input>
                     <h2>in</h2>
                 </div>
-                <div className="my-2">
+                <div className="my-2 flex justify-center">
                     <label>Weight: </label>
                     <input
                         className="mx-2"
@@ -39,14 +39,16 @@ export const BmrForm = () => {
                         min="0"
                         max="1000"
                     ></input>
+                    <h2>.</h2>
                     <input
                         className="mx-2"
                         type="number"
                         min="0"
                         max="9"
                     ></input>
+                    <h2>pounds</h2>
                 </div>
-                <input type="submit" value='Submit'></input>
+                <input type="submit" value="Submit"></input>
             </form>
         </div>
     );
