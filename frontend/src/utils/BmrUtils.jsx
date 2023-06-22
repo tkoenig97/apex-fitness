@@ -1,4 +1,4 @@
-const CalculateBmr = (age, gender, height, weight) => {
+export const CalculateBmr = (age, gender, height, weight) => {
     let bmr = 0
 
     if (gender === 'male') {
@@ -12,13 +12,13 @@ const CalculateBmr = (age, gender, height, weight) => {
     return bmr
 }
 
-const convertFtToIn = (feet, inches) => {
+export const convertFtToIn = (feet, inches) => {
     let output = inches
     output += (feet * 12)
     return output
 }
 
-const convertMToCm = (meters, centimeters) => {
+export const convertMToCm = (meters, centimeters) => {
     let output = centimeters;
     output += meters * 100;
     return output;
