@@ -23,6 +23,9 @@ export const Navbar = () => {
                 <li className="mt-6">
                     <Link to={'/log'}>Daily Log</Link>
                 </li>
+                <li>
+                    <Link to={'/bmr'}>BMR Calculator</Link>
+                </li>
                 <li className="mt-6">
                     <LoginButtons />
                 </li>
