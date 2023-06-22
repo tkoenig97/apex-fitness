@@ -9,7 +9,7 @@ export const CalculateBmr = (age, gender, height, weight) => {
         // 447.593 + (9.247 × weight in kg) + (3.098 × height in cm) - (4.330 × age in years) // Metric system
     }
 
-    return bmr
+    return Math.ceil(bmr)
 }
 
 export const convertFtToIn = (feet, inches) => {
