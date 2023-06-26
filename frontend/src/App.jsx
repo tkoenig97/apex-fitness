@@ -25,7 +25,7 @@ function App() {
             <UserContext.Provider value={{ user, setUser }}>
                 <div className="md:grid grid-cols-4">
                     <Navbar />
-                    <div className="col-span-3 text-center bg-gray-300">
+                    <div className="col-span-3 text-center bg-gray-300 p-8">
                         <Outlet />
                     </div>
                 </div>

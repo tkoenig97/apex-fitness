@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react';
 import { BmrForm } from '../components/bmr/BmrForm';
+import { BmrInformation } from '../components/bmr/BmrInformation';
 
 export const BmrContext = createContext(null);
 
@@ -8,11 +9,12 @@ export const BmrPage = () => {
 
     return (
         <div>
-            <h2 className="text-2xl my-5">BMR Calculator</h2>
+            <h2 className="text-2xl">BMR Calculator</h2>
             <BmrContext.Provider value={{ bmr, setBmr }}>
                 <BmrForm />
             </BmrContext.Provider>
-            <h2>{ bmr } Calories</h2>
+            <h2 className="text-2xl font-bold">{ bmr } Calories</h2>
+            <BmrInformation />
         </div>
     );
 };
