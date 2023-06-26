@@ -98,13 +98,17 @@ export const BmrForm = () => {
                         min="0"
                         max="9"
                         value={tenthWeight}
-                        onChange={(e) =>
-                            setTenthWeight(e.target.value)
-                        }
+                        onChange={(e) => setTenthWeight(e.target.value)}
                     ></input>
                     <h2>pounds</h2>
                 </div>
-                <input type="submit" value="Submit"></input>
+                <div>
+                    <input
+                        type="submit"
+                        value="Submit"
+                        className="px-4 py-2 mt-4 text-white bg-brown-400 rounded hover:bg-brown-600 cursor-pointer"
+                    ></input>
+                </div>
             </form>
         </div>
     );

@@ -21,6 +21,9 @@ export const Navbar = () => {
                     <Link to={'/bmr'}>BMR Calculator</Link>
                 </li>
                 <li className="mt-6">
+                    <Link to={'/trainer'}>AI Trainer</Link>
+                </li>
+                <li className="mt-6">
                     <Link to={'/progress'}>Progress</Link>
                 </li>
                 <li className="mt-6">
