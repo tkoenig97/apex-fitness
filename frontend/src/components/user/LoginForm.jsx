@@ -24,7 +24,7 @@ export const LoginForm = () => {
                     type="password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <input className='login-button' type="submit" value="Log In" />
+                <input className='submit-button' type="submit" value="Log In" />
                 <p>
                     {/* Don't have an account? <Link to={'/signup'}>Sign-Up!</Link> */}
                 </p>

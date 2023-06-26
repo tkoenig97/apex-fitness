@@ -106,7 +106,7 @@ export const BmrForm = () => {
                     <input
                         type="submit"
                         value="Submit"
-                        className="px-4 py-2 mt-4 text-white bg-brown-400 rounded hover:bg-brown-600 cursor-pointer"
+                        className="submit-button"
                     ></input>
                 </div>
             </form>
