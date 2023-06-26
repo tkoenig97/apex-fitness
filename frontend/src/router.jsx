@@ -5,6 +5,7 @@ import { LoginPage } from './pages/LoginPage';
 import { SignupPage } from './pages/SignupPage';
 import { BmrPage } from './pages/BmrPage';
 import App from './App'
+import { TrainerPage } from './pages/TrainerPage';
 
 const Router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const Router = createBrowserRouter([
             {
                 path: '/bmr',
                 element: <BmrPage />,
+            },
+            {
+                path: '/trainer',
+                element: <TrainerPage />,
             },
             {
                 path: '/login',
