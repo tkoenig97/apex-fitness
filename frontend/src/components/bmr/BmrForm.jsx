@@ -11,7 +11,7 @@ export const BmrForm = () => {
     const [weight, setWeight] = useState(0);
     const [tenthWeight, setTenthWeight] = useState(0);
 
-    const handleFormSubmit = (event) => {
+    const handleBmrFormSubmit = (event) => {
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Call the conversion function and CalculateBmr with the form values
@@ -29,7 +29,7 @@ export const BmrForm = () => {
 
     return (
         <div>
-            <form className="flex flex-col my-8" onSubmit={handleFormSubmit}>
+            <form className="flex flex-col my-8" onSubmit={handleBmrFormSubmit}>
                 <div className="my-2">
                     <label>Age: </label>
                     <input
@@ -99,7 +99,7 @@ export const BmrForm = () => {
                         max="9"
                         value={tenthWeight}
                         onChange={(e) =>
-                            setTenthWeight(parseInt(e.target.value))
+                            setTenthWeight(e.target.value)
                         }
                     ></input>
                     <h2>pounds</h2>
