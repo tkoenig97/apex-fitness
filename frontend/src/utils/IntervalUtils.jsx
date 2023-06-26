@@ -3,7 +3,7 @@ export const getTimerBgColor = (timerStarted, paused, mode) => {
 
     if (!timerStarted || paused) {
         backgroundColor = 'bg-yellow-400';
-    } else if (mode === 'rest') {
+    } else if (mode === 'REST') {
         backgroundColor = 'bg-red-400';
     } else {
         backgroundColor = 'bg-green-400';

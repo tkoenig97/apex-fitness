@@ -3,7 +3,7 @@ import { getTimerBgColor } from '../../utils/IntervalUtils';
 
 export const IntervalTimer = () => {
     const [seconds, setSeconds] = useState(10);
-    const [mode, setMode] = useState('paused'); // Update initial state to "paused"
+    const [mode, setMode] = useState('PAUSED'); // Update initial state to "paused"
     const [timerStarted, setTimerStarted] = useState(false);
     const [paused, setPaused] = useState(false);
 
@@ -11,7 +11,7 @@ export const IntervalTimer = () => {
         // Start the timer if it hasn't started yet
         if (!timerStarted) {
             setTimerStarted(true);
-            setMode('rest'); // Set mode to "rest" when the timer starts
+            setMode('REST'); // Set mode to "rest" when the timer starts
         } else {
             // Toggle the pause state if the timer is already started
             setPaused(!paused);
@@ -36,12 +36,12 @@ export const IntervalTimer = () => {
                     setSeconds((prevSeconds) => prevSeconds - 1);
                 } else {
                     // Switch between rest and work modes
-                    if (mode === 'rest') {
+                    if (mode === 'REST') {
                         setSeconds(20);
-                        setMode('work');
+                        setMode('WORK');
                     } else {
                         setSeconds(10);
-                        setMode('rest');
+                        setMode('REST');
                     }
                 }
             }, 1000);
@@ -63,7 +63,7 @@ export const IntervalTimer = () => {
             )} w-40 h-40 items-center flex justify-center cursor-pointer`}
             onClick={handleTimerActivation}
         >
-            <div>{paused ? 'paused' : mode}</div>
+            <div>{paused ? 'PAUSED' : mode}</div>
             {seconds}
             <div className="text-xl">workout</div>
         </div>
