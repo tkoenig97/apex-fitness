@@ -20,7 +20,7 @@ class Exercises(models.Model):
 class Routines(models.Model):
     id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=255)
-    user = models.ForeignKey('Users', on_delete=models.CASCADE)
+    user = models.ForeignKey('App_user', on_delete=models.CASCADE)
     type = models.CharField(max_length=255)
 
 class RoutineExercises(models.Model):
@@ -30,6 +30,3 @@ class RoutineExercises(models.Model):
     rest_duration = models.IntegerField()
     sets = models.IntegerField()
     weight = models.IntegerField(null=True)
-
-class Users(models.Model):
-    id = models.BigAutoField(primary_key=True)
