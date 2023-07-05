@@ -10,14 +10,13 @@ export const signUp = async (firstName, lastName, email, password) => {
     return response.data.success;
 };
 
-export const LogIn = async (email, password, navigate) => {
+export const logIn = async (email, password) => {
     let response = await axios.post('/login', {
         email: email,
         password: password,
     });
     console.log(response.data.login);
     if (response.data.login) {
-        navigate('/profile');
         return response.data.user;
     } else {
         return null;
