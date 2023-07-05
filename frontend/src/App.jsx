@@ -14,7 +14,7 @@ function App() {
 
     useEffect(() => {
         const getCurrUser = async () => {
-            setUser(await currUser());
+            setUser(await currUser(setUser));
         };
         getCurrUser();
     }, []);
