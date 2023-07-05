@@ -8,7 +8,7 @@ export const SignUpForm = () => {
 
     return (
         <div className="px-64">
-            <h1>Sign Up:</h1>
+            <h1 className='text-3xl'>Sign Up:</h1>
             <form className="flex flex-col my-8">
                 <div className='flex justify-center'>
                     <input
@@ -37,7 +37,7 @@ export const SignUpForm = () => {
                     type="password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <input className="submit-button" type="submit" value="Log In" />
+                <input className="submit-button" type="submit" value="Sign Up" />
             </form>
         </div>
     );

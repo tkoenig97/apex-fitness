@@ -6,7 +6,7 @@ export const LoginForm = () => {
 
     return (
         <div className='px-64'>
-            <h1>Log In:</h1>
+            <h1 className='text-3xl'>Log In:</h1>
             <form
                 className="flex flex-col my-8"
             >
