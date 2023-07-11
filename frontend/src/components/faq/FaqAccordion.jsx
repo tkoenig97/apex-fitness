@@ -11,22 +11,27 @@ export const FaqAccordion = ({ faqs }) => {
     return (
         <div>
             {faqs.map((faq, index) => (
-                <div key={index} className="accordion">
+                <div key={index} className="border-b">
                     <div
-                        className={`accordion-header ${
-                            activeIndex === index ? 'active' : ''
+                        className={`flex justify-between items-center py-3 px-4 cursor-pointer ${
+                            activeIndex === index
+                                ? 'bg-gray-200'
+                                : 'bg-gray-100'
                         }`}
                         onClick={() => toggleAccordion(index)}
                     >
-                        {faq.question}
+                        <h3 className="text-lg font-semibold">
+                            {faq.question}
+                        </h3>
+                        <span className="accordion-icon">
+                            {activeIndex === index ? '-' : '+'}
+                        </span>
                     </div>
-                    <div
-                        className={`accordion-content ${
-                            activeIndex === index ? 'active' : ''
-                        }`}
-                    >
-                        {faq.answer}
-                    </div>
+                    {activeIndex === index && (
+                        <div className="bg-gray-100 p-4">
+                            <p>{faq.answer}</p>
+                        </div>
+                    )}
                 </div>
             ))}
         </div>
