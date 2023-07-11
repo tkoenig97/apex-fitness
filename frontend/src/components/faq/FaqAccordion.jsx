@@ -21,7 +21,7 @@ export const FaqAccordion = ({ faqs }) => {
                             activeIndex === index
                                 ? 'bg-gray-200'
                                 : 'bg-gray-100'
-                        } transition duration-1000 ease-in-out`}
+                        }`}
                         onClick={() => toggleAccordion(index)}
                     >
                         {/* FAQ question */}
@@ -35,7 +35,13 @@ export const FaqAccordion = ({ faqs }) => {
                     </div>
                     {/* Accordion content */}
                     {activeIndex === index && (
-                        <div className="bg-gray-100 p-4">
+                        <div
+                            className={`bg-gray-100 p-4 ${
+                                activeIndex === index
+                                    ? 'max-h-[500px]'
+                                    : 'max-h-0 overflow-hidden'
+                            } transition duration-1000 ease-in-out`}
+                        >
                             <p>{faq.answer}</p>
                         </div>
                     )}
