@@ -29,7 +29,7 @@ export const FaqAccordion = ({ faqs }) => {
                             {faq.question}
                         </h3>
                         {/* Accordion icon (Indicates open or closed) */}
-                        <span className="accordion-icon">
+                        <span className="accordion-icon text-2xl">
                             {activeIndex === index ? '-' : '+'}
                         </span>
                     </div>
