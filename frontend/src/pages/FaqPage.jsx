@@ -15,7 +15,7 @@ export const FaqPage = () => {
 
     return (
         <div>
-            <h1>Frequently Asked Questions</h1>
+            <h1 className='page-header'>Frequently Asked Questions</h1>
             <FaqAccordion faqs={faqs} />
         </div>
     );

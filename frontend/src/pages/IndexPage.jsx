@@ -1,5 +1,5 @@
 export const IndexPage = () => {
     return (
-        <h1>Index Page</h1>
+        <h1 className="page-header">Index Page</h1>
     )
 }

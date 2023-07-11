@@ -57,3 +57,7 @@ button:focus-visible {
 .submit-button {
     @apply px-4 py-2 mt-4 text-white bg-brown-400 rounded hover:bg-brown-600 cursor-pointer;
 }
+
+.page-header {
+    @apply text-3xl font-bold mb-4;
+  }

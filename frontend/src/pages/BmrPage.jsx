@@ -9,7 +9,7 @@ export const BmrPage = () => {
 
     return (
         <div>
-            <h2 className="text-2xl">BMR Calculator</h2>
+            <h2 className="page-header">BMR Calculator</h2>
             <BmrContext.Provider value={{ bmr, setBmr }}>
                 <BmrForm />
             </BmrContext.Provider>
